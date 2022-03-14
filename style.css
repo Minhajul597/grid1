@@ -1,0 +1,39 @@
+#topbar{
+    background-color: rgb(133, 233, 33);
+    grid-area: topbar;
+}
+#sidebar{
+    background-color: dodgerblue;
+    grid-area: sidebar;
+}
+#mainbar{
+    background-color: darkorange;
+    grid-area: mainbar;
+}
+#leftbar{
+    background-color: brown;
+    grid-area: leftbar;
+}
+#rightbar{
+    background-color: indigo;
+    grid-area: rightbar;
+}
+#footer{
+    background-color: rgb(15, 190, 94);
+    grid-area: footer;
+}
+.cis{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 0.2fr;
+    grid-template-areas: "topbar topbar topbar topbar" "sidebar mainbar mainbar mainbar" "sidebar leftbar rightbar rightbar" "footer footer footer footer";
+    height: 100vh;
+}
+@media only screen and (max-width:650px)
+{
+    .cis{
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .2fr .2fr .2fr .2fr .2fr;
+        grid-template-areas: "topbar" "sidebar" "mainbar" "leftbar" "rightbar" "footer";
+    }
+}
